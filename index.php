@@ -56,8 +56,7 @@ session_start();
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#top" class="smoothScroll"><span>Home</span></a></li>
-                        <li><a href="#about" class="smoothScroll"><span>About</span></a></li>
+                        <li><a href="#about" class="smoothScroll"><span>Quienes somos</span></a></li>
                         <li><a href="#gallery" class="smoothScroll"><span>Gallery</span></a></li>
                         <li><a href="#contact" class="smoothScroll"><span>Servicios</span></a></li>
                         <li><a href="#contact" class="smoothScroll"><span>Calidad</span></a></li>
@@ -96,7 +95,7 @@ session_start();
                     <div class="container col-xs-12 col-md-6">
                         <div class="about-text">
                             <h1 style="color: #fff; font-family: 'Teko', sans-serif; font-weight: 700; font-size: 35px; margin-top: 5px;
-                       text-shadow: 3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 2px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">RUCON 3D</h1>
+                                text-shadow: 3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 2px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">RUCON 3D</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
                             <a href="#portfolio" class="btn btn-default btn-lg page-scroll">Servicios</a> 
@@ -107,7 +106,7 @@ session_start();
         </div>
 
         <!-- About section -->
-        <section id="about" style="background: #f0f0f0">
+        <section id="file" style="background: #f0f0f0">
             <div class="container-fluid">
                 <div class="col-lg-4">
                     <div style="border-style: solid; border-width: 1px; border-radius: 10px">
@@ -136,41 +135,19 @@ session_start();
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Gallery section -->
         <section id="gallery">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-
-                    <div class="col-md-offset-2 col-md-8 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="section-title">
-                            <h1>Galeria</h1>
-                            <p>Catalogo de piezas diseñadas y fabricadas por RUCON 3D</p>
-                        </div>
-                    </div>
-
                     <ul class="grid cs-style-4">
-                        <li class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="container col-xs-12 col-md-6">
+                            <div class="about-text">
+                                <h1 class="text-center">SERVICIOS</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1"></div>
+                        <li class=" container col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.7s">
                             <figure>
                                 <div><img src="images/gallery-img1.jpg" alt="image 1"></div>
                                 <figcaption>
@@ -180,39 +157,36 @@ session_start();
                                 </figcaption>
                             </figure>
                         </li>
+                    </ul>
 
-                        <li class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="1.1s">
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery section -->
+        <section id="gallery">
+            <div class="container-fluid">
+                <div class="row">
+                    <ul class="grid cs-style-4">
+                        <li class=" container col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.7s">
                             <figure>
-                                <div><img src="images/gallery-img2.jpg" alt="image 2"></div>
+                                <div><img src="images/gallery-img1.jpg" alt="image 1"></div>
                                 <figcaption>
-                                    <h1>Accesorios</h1>
-                                    <small>Suspendisse venenatis quam sed libero euismod feugiat.</small>
-                                    <a href="view/Frontend/viewOther/viewCatalogue.php">Detalles</a>
+                                    <h1>Boquillas</h1>
+                                    <small>Se realizan modelos personalizados de boquillas para cachimba y vaper</small>
+                                    <a href="view/Frontend/viewBoquillas/viewCatalogue.php">Ver Todo</a>
                                 </figcaption>
                             </figure>
                         </li>
+                        <div class="col-md-1 col-sm-1"></div>
 
-                        <!--<li class="col-md-6 col-sm-6">
-                            <figure>
-                                <div><img src="images/gallery-img3.jpg" alt="image 3"></div>
-                                <figcaption>
-                                    <h1>Cras ante sem</h1>
-                                    <small>Aenean urna massa, convallis vehicula velit et, dictum pellentesque nisi.</small>
-                                    <a href="#">Learn More</a>
-                                </figcaption>
-                            </figure>
-                        </li>
-
-                        <li class="col-md-6 col-sm-6">
-                            <figure>
-                                <div><img src="images/gallery-img4.jpg" alt="image 4"></div>
-                                <figcaption>
-                                    <h1>Sed ornare</h1>
-                                    <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
-                                    <a href="#">Full Post</a>
-                                </figcaption>
-                            </figure>
-                        </li>-->
+                        <div class="container col-xs-12 col-md-6">
+                            <div class="about-text">
+                                <h1 class="text-center">SERVICIOS</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+                            </div>
+                        </div>
                     </ul>
 
                 </div>
