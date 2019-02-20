@@ -22,12 +22,33 @@ session_start();
         <link rel="stylesheet" href="css/owl.carousel.css">
         <link rel="stylesheet" href="css/vegas.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/chosen.css">
+        <link rel="stylesheet" href="css/ImageSelect.css">
 
         <!-- Google web font  -->
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Teko:400,500,600" rel="stylesheet">
 
     </head>
+    <style>
+        /* HIDE RADIO */
+        [type=radio] { 
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* IMAGE STYLES */
+        [type=radio] + img {
+            cursor: pointer;
+        }
+
+        /* CHECKED STYLES */
+        [type=radio]:checked + img {
+            outline: 2px solid #f00;
+        }
+    </style>
     <body id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
 
@@ -93,12 +114,11 @@ session_start();
                 <div class="row ">
                     <div class="container col-xs-12 col-md-6"><img src="images/team-img2.jpg" class="img-responsive" alt=""> </div>
                     <div class="container col-xs-12 col-md-6">
-                        <div class="about-text">
-                            <h1 style="color: #fff; font-family: 'Teko', sans-serif; font-weight: 700; font-size: 35px; margin-top: 5px;
+                        <div class="about-text" >
+                            <h1 style="color: #fff; font-family: 'Teko', sans-serif; font-weight: 700; font-size: 35px;
                                 text-shadow: 3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 2px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">RUCON 3D</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
-                            <a href="#portfolio" class="btn btn-default btn-lg page-scroll">Servicios</a> 
+                            <p style="color: #262626">Lorem ipsum dolor sit amet consectetur adipiscing elit facilisis bibendum, volutpat potenti id arcu mollis mi nisi sociis, aliquam ultricies nibh imperdiet magna orci litora curabitur. Sollicitudin feugiat maecenas eget tempor scelerisque ornare sed per consequat molestie parturient, nam himenaeos fermentum senectus primis in phasellus nisl etiam rutrum, auctor vehicula vel diam hac suscipit tellus ultrices netus ullamcorper. Penatibus accumsan sagittis nullam magnis quis pretium et risus venenatis curae, nostra fringilla viverra sociosqu elementum aptent quam egestas pellentesque conubia, pharetra vestibulum habitasse odio hendrerit pulvinar cursus felis sodales. Porttitor vulputate laoreet facilisi posuere gravida augue tincidunt nulla cubilia, praesent tristique mauris erat convallis nunc integer suspendisse inceptos, natoque ante aenean taciti interdum vivamus metus platea.</p>
+                            <p style="color: #262626">Condimentum torquent nascetur euismod morbi congue montes dignissim ad, ligula varius eros habitant faucibus tempus est donec rhoncus, libero mus blandit lectus iaculis non dictum. Sapien dui vitae turpis mattis purus, lacinia dapibus ut enim.</p>
                         </div>
                     </div>
                 </div>
@@ -108,29 +128,111 @@ session_start();
         <!-- About section -->
         <section id="file" style="background: #f0f0f0">
             <div class="container-fluid">
-                <div class="col-lg-4">
-                    <div style="border-style: solid; border-width: 1px; border-radius: 10px">
-                        <h2>Colores</h2>
+                <div class="container text-center col-md-5">
+                    <div>
+                        <div class="form-group">
+                            <h1 style="font-size: 25px; margin-bottom: -5px">Color</h1>
+                            <select style="padding: 6px 140px 6px 5px; border-radius: 5px" class="my-select"> 
+                                <option data-img-src="images/team-img2.jpg" value="0">Elegir color</option>  
+
+                                <?php
+                               $provincias = array("2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970");
+
+                                foreach ($provincias as $c => $v) {
+
+                                   echo "<option data-img-src='$v' value='$v'>$v</option>";
+                                }
+                                
+                                ?> 
+                            </select> 
+
+                        </div>
                     </div>
                     <br>
-                    <div style="border-style: solid; border-width: 1px; border-radius: 10px">
-                        <h2>Colores</h2>
+                    <div>
+                        <h1 style="font-size: 25px; color: #000">material</h1>
+                        <div class="col-lg-4">
+                            <a style="font: caption; font-size: 18px; color: #255625">ONE</a>
+                            <p style="font: caption; font-size: 15px">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <a style="font: caption; font-size: 18px; color: #255625">ONE</a>
+                            <p style="font: caption; font-size: 15px">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <a style="font: caption; font-size: 18px; color: #255625">ONE</a>
+                            <p style="font: caption; font-size: 15px">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
                     </div>
                     <br>
-                    <div style="border-style: solid; border-width: 1px; border-radius: 10px">
-                        <h2>Colores</h2>
+                    <div>
+                        <h1 style="font-size: 25px">relleno</h1>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
                     </div>
                     <br>
-                    <div style="border-style: solid; border-width: 1px; border-radius: 10px">
-                        <h2>Colores</h2>
+                    <div>
+                        <h1 style="font-size: 25px">calidad</h1>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                       
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
+                            <label>
+                                <input type="radio" name="test" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
                     </div>
                     <br>
-                    <div style="border-style: solid; border-width: 1px; border-radius: 10px">
-                        <h2>Colores</h2>
+                    <div>
+                        <h1 style="font-size: 25px">escala</h1>
                     </div>
                 </div>
-                <div class="col-lg-8 container">
-                    <iframe class="wow fadeInDownBig" data-wow-delay="0.6s" id="vs_iframe" src="https://www.viewstl.com/?embedded&shading=wireframe" style="border:0; margin-left: 180px; width:80%; height:650px;"></iframe>
+                <div class="col-md-7 container">
+                    <iframe class="wow fadeInDownBig" data-wow-delay="0.6s" id="vs_iframe" src="https://www.viewstl.com/?embedded" style="border:0; width:100%; height:650px;"></iframe>
                 </div>
             </div>
         </section>
@@ -142,9 +244,7 @@ session_start();
                         <div class="container col-xs-12 col-md-6">
                             <div class="about-text">
                                 <h1 class="text-center">SERVICIOS</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
-                            </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit montes eros sociis, scelerisque consequat netus egestas cras molestie eu nostra platea diam vitae, curae iaculis porttitor elementum non torquent fringilla ultricies facilisi. Dictumst ante hendrerit placerat tellus blandit pulvinar sollicitudin commodo, mus accumsan ridiculus parturient luctus felis pretium, habitant mauris lacinia gravida sem fames odio. Magna nisl id velit rhoncus duis magnis quis, conubia varius euismod aptent neque habitasse cursus, in quam mi dignissim tincidunt est.</p></div>
                         </div>
                         <div class="col-md-1 col-sm-1"></div>
                         <li class=" container col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.7s">
@@ -183,9 +283,7 @@ session_start();
                         <div class="container col-xs-12 col-md-6">
                             <div class="about-text">
                                 <h1 class="text-center">SERVICIOS</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
-                            </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit montes eros sociis, scelerisque consequat netus egestas cras molestie eu nostra platea diam vitae, curae iaculis porttitor elementum non torquent fringilla ultricies facilisi. Dictumst ante hendrerit placerat tellus blandit pulvinar sollicitudin commodo, mus accumsan ridiculus parturient luctus felis pretium, habitant mauris lacinia gravida sem fames odio. Magna nisl id velit rhoncus duis magnis quis, conubia varius euismod aptent neque habitasse cursus, in quam mi dignissim tincidunt est.</p></div>
                         </div>
                     </ul>
 
@@ -277,11 +375,11 @@ session_start();
         <script src="js/three.min.js"></script>
         <script src="js/toucheffects.js"></script>
         <script src="js/vegas.min.js"></script>
-
-
-
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+        <script src="js/chosen.jquery.js"></script>
+        <script src="js/ImageSelect.jquery.js"></script>
         <script>
-            var stl_viewer = new StlViewer(document.getElementById("stl_cont"), {models: [{id: 0, filename: "mystl.stl"}]});
+            $(".my-select").chosen();
         </script>
 
     </body>
