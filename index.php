@@ -46,7 +46,8 @@ session_start();
 
         /* CHECKED STYLES */
         [type=radio]:checked + img {
-            outline: 2px solid #f00;
+            outline: 3px solid #f00;
+            padding: 2px 2px 2px 2px;
         }
     </style>
     <body id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
@@ -128,10 +129,10 @@ session_start();
         <!-- About section -->
         <section id="file" style="background: #f0f0f0">
             <div class="container-fluid">
-                <div class="container text-center col-md-5">
-                    <div>
+                <div class="col-md-5" style="margin-top: -80px">
+                    <div class="text-center" style="margin-bottom: -45px">
                         <div class="form-group">
-                            <h1 style="font-size: 25px; margin-bottom: -5px">Color</h1>
+                            <h1 style="font-size: 35px; margin-bottom: -5px">Color</h1>
                             <select style="padding: 6px 140px 6px 5px; border-radius: 5px" class="my-select"> 
                                 <option data-img-src="images/team-img2.jpg" value="0">Elegir color</option>  
 
@@ -148,90 +149,91 @@ session_start();
 
                         </div>
                     </div>
-                    <br>
-                    <div>
-                        <h1 style="font-size: 25px; color: #000">material</h1>
+                 
+                    <div class="text-center" style="padding: 45px 45px 45px 45px">
+                        <h1 style="font-size: 35px; color: #fff; background-color: #000; font-weight: 300; padding: 2px 2px 2px 2px">material</h1>
                         <div class="col-lg-4">
-                            <a style="font: caption; font-size: 18px; color: #255625">ONE</a>
+                            <a style="font: caption; font-size: 18px; color: #777">ONE</a>
                             <p style="font: caption; font-size: 15px">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
                             <label>
-                                <input type="radio" name="test" value="one">
+                                <input type="radio" name="mat" value="one">
                                 <img class="img-responsive" src="images/team-img1.jpg">
                             </label>
                         </div>
                         <div class="col-lg-4">
-                            <a style="font: caption; font-size: 18px; color: #255625">ONE</a>
+                            <a style="font: caption; font-size: 18px; color: #777">TWO</a>
                             <p style="font: caption; font-size: 15px">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
                             <label>
-                                <input type="radio" name="test" value="one">
+                                <input type="radio" name="mat" value="one">
                                 <img class="img-responsive" src="images/team-img1.jpg">
                             </label>
                         </div>
                         <div class="col-lg-4">
-                            <a style="font: caption; font-size: 18px; color: #255625">ONE</a>
+                            <a style="font: caption; font-size: 18px; color: #777">THREE</a>
                             <p style="font: caption; font-size: 15px">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
                             <label>
-                                <input type="radio" name="test" value="one">
+                                <input type="radio" name="mat" value="one">
                                 <img class="img-responsive" src="images/team-img1.jpg">
                             </label>
                         </div>
                     </div>
-                    <br>
-                    <div>
-                        <h1 style="font-size: 25px">relleno</h1>
+                    <div class="text-center" style="padding: 45px 45px 45px 45px">
+                        <h1 style="font-size: 35px; margin-bottom: -25px; color: #000; font-weight: 300">relleno</h1>
                         <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>
+                            <h2 style="font: caption; font-size: 15px; color: #777">0% - 30%</h2>
                             <label>
-                                <input type="radio" name="test" value="one">
+                                <input type="radio" name="relleno" value="one">
                                 <img class="img-responsive" src="images/team-img1.jpg">
                             </label>
                         </div>
                         <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
+                            <h2 style="font: caption; font-size: 15px; color: #777">30% - 60%</h2>                        
                             <label>
-                                <input type="radio" name="test" value="one">
+                                <input type="radio" name="relleno" value="one">
                                 <img class="img-responsive" src="images/team-img1.jpg">
                             </label>
                         </div>
                         <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
+                            <h2 style="font: caption; font-size: 15px; color: #777">60% - 100%</h2>                        
                             <label>
-                                <input type="radio" name="test" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div>
-                        <h1 style="font-size: 25px">calidad</h1>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
-                            <label>
-                                <input type="radio" name="test" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                       
-                            <label>
-                                <input type="radio" name="test" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 18px; color: #255625">ONE</h2>                        
-                            <label>
-                                <input type="radio" name="test" value="one">
+                                <input type="radio" name="relleno" value="one">
                                 <img class="img-responsive" src="images/team-img1.jpg">
                             </label>
                         </div>
                     </div>
-                    <br>
-                    <div>
-                        <h1 style="font-size: 25px">escala</h1>
+                    <div class="text-center" style="padding: 45px 45px 45px 45px" >
+                        <h1 style="font-size: 35px; margin-bottom: -25px; color: #000; font-weight: 300">calidad</h1>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 15px; color: #777">Baja</h2>                        
+                            <label>
+                                <input type="radio" name="calidad" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 15px; color: #777">Media</h2>                       
+                            <label>
+                                <input type="radio" name="calidad" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 style="font: caption; font-size: 15px; color: #777">Alta</h2>                        
+                            <label>
+                                <input type="radio" name="calidad" value="one">
+                                <img class="img-responsive" src="images/team-img1.jpg">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h1 style="font-size: 35px; margin-bottom: -25px">escala</h1>
                     </div>
                 </div>
-                <div class="col-md-7 container">
+                <div class="col-md-7 container" style="margin-top: 55px; margin-bottom: -155px">
+                    <div>
+                        <h1 class="text-center" style="font-size: 35px; color: #000; font-weight: 300">Visualizador</h1>
+                    </div>
+                    <hr>
                     <iframe class="wow fadeInDownBig" data-wow-delay="0.6s" id="vs_iframe" src="https://www.viewstl.com/?embedded" style="border:0; width:100%; height:650px;"></iframe>
                 </div>
             </div>
@@ -345,11 +347,8 @@ session_start();
 
                         <p class="wow fadeInUp"  data-wow-delay="1s" >Copyright &copy; 2016 Snapshot Studio |
                             Design: <a title="free css templates" target="_blank">EmulanDeveloper</a></p>
-
                     </div>
-
                 </div>
-
             </div>
         </footer>
 
@@ -366,16 +365,8 @@ session_start();
         <script src="js/smoothscroll.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/custom.js"></script>
-        <script src="js/CanvasRenderer.js"></script>
-        <script src="js/OrbitControls.js"></script>
-        <script src="js/Projector.js"></script>
-        <script src="js/load_stl.min.js"></script>
-        <script src="js/parser.min.js"></script>
-        <script src="js/stl_viewer.min.js"></script>
-        <script src="js/three.min.js"></script>
         <script src="js/toucheffects.js"></script>
         <script src="js/vegas.min.js"></script>
-        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
         <script src="js/chosen.jquery.js"></script>
         <script src="js/ImageSelect.jquery.js"></script>
         <script>
