@@ -30,7 +30,7 @@ session_start();
         <link href="https://fonts.googleapis.com/css?family=Teko:400,500,600" rel="stylesheet">
 
     </head>
-    <style>
+    <style media="screen">
         /* HIDE RADIO */
         [type=radio] { 
             position: absolute;
@@ -57,6 +57,26 @@ session_start();
             margin-bottom: -25px;
             margin-top: 35px;
         }
+
+
+        /*        #custom-button {
+                    padding: 5px;
+                    color: white;
+                    background-color: #122b44;
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+        
+                #custom-button:hover {
+                    background-color: #00b28f;
+                }
+        
+                #custom-text {
+                    margin-left: 10px;
+                    font-family: sans-serif;
+                    color: #aaa;
+                }*/
     </style>
     <body id="top" data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
 
@@ -136,146 +156,152 @@ session_start();
 
         <!-- About section -->
         <section id="file" style="background: #222">
-            <div class="container-fluid">
-                <div class="col-md-5">
-                    <div class="text-center" style="margin-top: -75px">
-                        <div class="form-group">
-                            <h1 style="font-size: 35px; margin-bottom: -5px; color: #fff">Color</h1>
-                            <select style="padding: 6px 140px 6px 5px; border-radius: 5px" class="my-select"> 
-                                <option data-img-src="images/team-img2.jpg" value="0">Elegir color</option>  
+            <form>
+                <div class="container-fluid">
+                    <div class="col-md-5">
+                        <div class="text-center" style="margin-top: -75px">
+                            <div class="form-group">
+                                <h1 style="font-size: 35px; margin-bottom: -5px; color: #fff">Color</h1>
+                                <select style="padding: 6px 140px 6px 5px; border-radius: 5px" class="my-select"> 
+                                    <option data-img-src="images/team-img2.jpg" value="0">Elegir color</option>  
 
-                                <?php
-                                $provincias = array("2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970");
+                                    <?php
+                                    $provincias = array("2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970");
 
-                                foreach ($provincias as $c => $v) {
+                                    foreach ($provincias as $c => $v) {
 
-                                    echo "<option data-img-src='$v' value='$v'>$v</option>";
-                                }
-                                ?> 
-                            </select> 
-                        </div>
-                    </div>
-
-                    <br>
-                    <div class="text-center" style="padding: 2px 2px 2px 2px; margin-top: -45px">
-                        <h1 class="h1-datos" style="margin-bottom: 0">material</h1>
-                        <div class="col-lg-4">
-                            <a style="font: caption; font-size: 15px; color: #777" data-toggle="collapse" href="#pla" role="button" aria-expanded="false" aria-controls="pla">PLASTICO&dtrif;</a>
-                            <p style="font: caption; font-size: 15px" class="collapse" id="pla">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
-                            <label>
-                                <input type="radio" name="mat" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <a style="font: caption; font-size: 15px; color: #777" data-toggle="collapse" href="#flex" role="button" aria-expanded="false" aria-controls="flex">FLEXIBLE&dtrif;</a>
-                            <p style="font: caption; font-size: 15px" class="collapse" id="flex">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
-                            <label>
-                                <input type="radio" name="mat" value="one">
-                                <img class="img-responsive" src="images/team-img2.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <a style="font: caption; font-size: 15px; color: #777" data-toggle="collapse" href="#flor" role="button" aria-expanded="false" aria-controls="flor">FLORESCENTE&dtrif;</a>
-                            <p style="font: caption; font-size: 15px" class="collapse" id="flor">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
-                            <label>
-                                <input type="radio" name="mat" value="one">
-                                <img class="img-responsive" src="images/team-img3.jpg">
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="text-center" style="padding: 2px 2px 2px 2px;">
-                        <h1 class="h1-datos">relleno</h1>
-                        <div class="col-md-4">
-                            <h2 style="font: caption; font-size: 15px; color: #777">0% - 30%</h2>
-                            <label>
-                                <input type="radio" name="relleno" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 15px; color: #777">30% - 60%</h2>                        
-                            <label>
-                                <input type="radio" name="relleno" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 15px; color: #777">60% - 100%</h2>                        
-                            <label>
-                                <input type="radio" name="relleno" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="text-center" style="padding: 2px 2px 2px 2px;">
-                        <h1 class="h1-datos">calidad</h1>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 15px; color: #777">Baja</h2>                        
-                            <label>
-                                <input type="radio" name="calidad" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 15px; color: #777">Media</h2>                       
-                            <label>
-                                <input type="radio" name="calidad" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                        <div class="col-lg-4">
-                            <h2 style="font: caption; font-size: 15px; color: #777">Alta</h2>                        
-                            <label>
-                                <input type="radio" name="calidad" value="one">
-                                <img class="img-responsive" src="images/team-img1.jpg">
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="text-center">
-                        <h1 class="h1-datos" style="margin-bottom: 0">escala</h1>
-                        <div class="form-row center-block">
-                            <div class="col-xs-4">
-                                <p style="color: #e0e0e0; font: status-bar; font-size: 15px; letter-spacing: 2px; text-align: left; margin-top: 10px">Largo</p>
-                                <input type="number" class="form-control" placeholder="Eje X" pattern="[2-21]+" title="Tamaño minimo: 2cm Tamaño máximo: 21cm"
-                                       minlength="2" maxlength="21" xstyle="background-color: #f2f2f2">
-                            </div>
-                            <div class="col-xs-4">
-                                <p style="color: #e0e0e0; font: status-bar; font-size: 15px; letter-spacing: 2px; text-align: left; margin-top: 10px">Ancho</p>
-
-                                <input type="text" class="form-control" placeholder="Eje Y" pattern="[2-21]+" title="Tamaño minimo: 2cm Tamaño máximo: 21cm"
-                                       minlength="2" maxlength="21" style="background-color: #f2f2f2">
-                            </div>
-                            <div class="col-xs-4">                               
-                                <p style="color: #e0e0e0; font: status-bar; font-size: 15px; letter-spacing: 2px; text-align: left; margin-top: 10px">Alto</p>
-                                <input type="text" class="form-control" placeholder="Eje Z" pattern="[0-9]+" title="Tamaño minimo: 2cm Tamaño máximo: 21cm"
-                                       minlength="2" maxlength="21" style="background-color: #f2f2f2">
+                                        echo "<option data-img-src='$v' value='$v'>$v</option>";
+                                    }
+                                    ?> 
+                                </select> 
                             </div>
                         </div>
-                        <p class="col-xs-12" style="font-size: 15px">  Escala no más mayor de 21 x 21 x 21cm y tampoco menor de 2 x 2 x 2cm</p>
+
+                        <br>
+                        <div class="text-center" style="padding: 2px 2px 2px 2px; margin-top: -45px">
+                            <h1 class="h1-datos" style="margin-bottom: 0">material</h1>
+                            <div class="col-lg-4">
+                                <a style="font: caption; font-size: 15px; color: #777" data-toggle="collapse" href="#pla" role="button" aria-expanded="false" aria-controls="pla">PLASTICO&dtrif;</a>
+                                <p style="font: caption; font-size: 15px" class="collapse" id="pla">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
+                                <label>
+                                    <input type="radio" name="mat" value="one">
+                                    <img class="img-responsive" src="images/team-img1.jpg">
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <a style="font: caption; font-size: 15px; color: #777" data-toggle="collapse" href="#flex" role="button" aria-expanded="false" aria-controls="flex">FLEXIBLE&dtrif;</a>
+                                <p style="font: caption; font-size: 15px" class="collapse" id="flex">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
+                                <label>
+                                    <input type="radio" name="mat" value="one">
+                                    <img class="img-responsive" src="images/team-img2.jpg">
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <a style="font: caption; font-size: 15px; color: #777" data-toggle="collapse" href="#flor" role="button" aria-expanded="false" aria-controls="flor">FLORESCENTE&dtrif;</a>
+                                <p style="font: caption; font-size: 15px" class="collapse" id="flor">Lorem ipsum dolor sit amet consectetur, adipiscing elit platea ultricies curae, at maecenas iaculis vehicula.</p>
+                                <label>
+                                    <input type="radio" name="mat" value="one">
+                                    <img class="img-responsive" src="images/team-img3.jpg">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center" style="padding: 2px 2px 2px 2px;">
+                            <h1 class="h1-datos">relleno</h1>
+                            <div class="col-md-4">
+                                <h2 style="font: caption; font-size: 15px; color: #777">0% - 30%</h2>
+                                <label>
+                                    <input type="radio" name="relleno" value="one">
+                                    <img class="img-responsive" src="images/team-img1.jpg">
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <h2 style="font: caption; font-size: 15px; color: #777">30% - 60%</h2>                        
+                                <label>
+                                    <input type="radio" name="relleno" value="one">
+                                    <img class="img-responsive" src="images/team-img1.jpg">
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <h2 style="font: caption; font-size: 15px; color: #777">60% - 100%</h2>                        
+                                <label>
+                                    <input type="radio" name="relleno" value="one">
+                                    <img class="img-responsive" src="images/team-img1.jpg">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center" style="padding: 2px 2px 2px 2px;">
+                            <h1 class="h1-datos">calidad</h1>
+                            <div class="col-lg-4">
+                                <h2 style="font: caption; font-size: 15px; color: #777">Baja</h2>                        
+                                <label>
+                                    <input type="radio" name="calidad" value="one">
+                                    <img class="img-responsive" src="images/team-img1.jpg">
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <h2 style="font: caption; font-size: 15px; color: #777">Media</h2>                       
+                                <label>
+                                    <input type="radio" name="calidad" value="one">
+                                    <img class="img-responsive" src="images/team-img1.jpg">
+                                </label>
+                            </div>
+                            <div class="col-lg-4">
+                                <h2 style="font: caption; font-size: 15px; color: #777">Alta</h2>                        
+                                <label>
+                                    <input type="radio" name="calidad" value="one">
+                                    <img class="img-responsive" src="images/team-img1.jpg">
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <h1 class="h1-datos" style="margin-bottom: 0">escala</h1>
+                            <div class="form-row center-block">
+                                <div class="col-xs-4">
+                                    <p style="color: #e0e0e0; font: status-bar; font-size: 15px; letter-spacing: 2px; text-align: left; margin-top: 10px">Largo</p>
+                                    <input type="number" class="form-control" placeholder="Eje X" pattern="[2-21]+" title="Tamaño minimo: 2cm Tamaño máximo: 21cm"
+                                           minlength="2" maxlength="21" xstyle="background-color: #f2f2f2">
+                                </div>
+                                <div class="col-xs-4">
+                                    <p style="color: #e0e0e0; font: status-bar; font-size: 15px; letter-spacing: 2px; text-align: left; margin-top: 10px">Ancho</p>
+
+                                    <input type="text" class="form-control" placeholder="Eje Y" pattern="[2-21]+" title="Tamaño minimo: 2cm Tamaño máximo: 21cm"
+                                           minlength="2" maxlength="21" style="background-color: #f2f2f2">
+                                </div>
+                                <div class="col-xs-4">                               
+                                    <p style="color: #e0e0e0; font: status-bar; font-size: 15px; letter-spacing: 2px; text-align: left; margin-top: 10px">Alto</p>
+                                    <input type="text" class="form-control" placeholder="Eje Z" pattern="[0-9]+" title="Tamaño minimo: 2cm Tamaño máximo: 21cm"
+                                           minlength="2" maxlength="21" style="background-color: #f2f2f2">
+                                </div>
+                            </div>
+                            <p class="col-xs-12" style="font-size: 15px">Escala no más mayor de 21 x 21 x 21cm y tampoco menor de 2 x 2 x 2cm</p>
+                        </div>
+                        <div class="text-center">
+                            <br><br><br><br><br><br><hr><br>
+                            <h2 style="font: caption; font-size: 25px; color: #777; margin-top: 0" class="col-md-6">PRECIO:</h2>  
+                            <h2 style="font: caption; font-size: 25px; color: #777; margin-top: 0" class="col-md-3">0.00 € </h2>                       
+                        </div>
                     </div>
-                    
+
+                    <div class="col-md-7 container" style="margin-top: 25px;">
+                        <h1 class="text-center" style="font-size: 35px; color: #fff; font-weight: 300">Sube tu archivo</h1>
+                        <div class="custom-file">
+                            <input type="file" id="real-file" style="display: none">
+                            <button type="button" class="custom-file-input" id="custom-button">CHOOSE A FILE</button>
+                            <label class="custom-file-label" id="custom-text">No file chosen, yet.</label>
+                        </div>
+                        <p style="font-size: 15px">Envianos el archivo de la pieza para la impresión.</p>
+
+                        <div>
+                            <h1 class="text-center" style="font-size: 35px; color: #fff; font-weight: 300">Visualizador</h1>
+                        </div>
+                        <hr>
+                        <iframe class="wow fadeInDownBig" data-wow-delay="0.6s" id="vs_iframe" src="https://www.viewstl.com/?embedded" style="padding-top: 3px; border-radius: 5px; width:100%; height:650px; background-color: #f2f2f2"></iframe>
+                    </div>
                 </div>
-
-                <div class="col-md-7 container" style="margin-top: 5px;">
-                    <div>
-                        <h1 class="text-center h1-datos" style="margin-bottom: 0">Subir archivo</h1>
-                    <div class="custom-file" style="">
-                        <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                    </div>
-                        <p>Envianos el archivo de la pieza para la impresion.</p>
-                    </div>
-                    <div>
-                        <h1 class="text-center" style="font-size: 35px; color: #fff; font-weight: 300">Visualizador</h1>
-                    </div>
-                    <hr>
-                    <iframe class="wow fadeInDownBig" data-wow-delay="0.6s" id="vs_iframe" src="https://www.viewstl.com/?embedded" style="padding-top: 3px; border-radius: 5px; width:100%; height:650px; background-color: #f2f2f2"></iframe>
-                </div>
-            </div>
+            </form>
         </section>
 
         <section id="gallery">
@@ -395,11 +421,28 @@ session_start();
         <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 
         <!-- Javascript  -->
+        <script>
+            const realFileBtn = document.getElementById("real-file");
+            const customBtn = document.getElementById("custom-button");
+            const customTxt = document.getElementById("custom-text");
+
+            customBtn.addEventListener("click", function () {
+                realFileBtn.click();
+            });
+
+            realFileBtn.addEventListener("change", function () {
+                if (realFileBtn.value) {
+                    customTxt.innerHTML = realFileBtn.value.match(
+                            /[\/\\]([\w\d\s\.\-\(\)]+)$/
+                            )[1];
+                } else {
+                    customTxt.innerHTML = "No file chosen, yet.";
+                }
+            });
+        </script>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/vegas.min.js"></script>
         <script src="js/modernizr.custom.js"></script>
-        <script src="js/toucheffects.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/smoothscroll.js"></script>
         <script src="js/wow.min.js"></script>
@@ -411,6 +454,7 @@ session_start();
         <script>
             $(".my-select").chosen();
         </script>
+
 
     </body>
 </html>
